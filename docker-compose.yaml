@@ -1,0 +1,15 @@
+services:
+  aem-author:
+    build: .
+    container_name: aem-author
+    ports:
+      - "4600:4502"
+    volumes:
+      - maven-repo:/root/.m2
+      - aem-data:/opt/aem/crx-quickstart
+    environment:
+      - JAVA_OPTS=-Xmx2048m
+
+volumes:
+  maven-repo:
+  aem-data:

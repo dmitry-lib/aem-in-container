@@ -1,7 +1,7 @@
 services:
   aem-author:
     build: .
-    container_name: aem-author
+    container_name: aem-author-pure
     ports:
       - "4600:4502"
     volumes:
